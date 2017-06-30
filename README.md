@@ -23,7 +23,7 @@ This program relies entirely on syslog, and because all appliances format logs d
 7. Add headquarters latitude/longitude to hqLatLng variable in **index.html**
 8. Add API token for mapbox to **L.Mapbox.accessToken** in **map.js**
 9. Set **map = L.mapbox.map("map", "mapbox.dark", {** This allows for a darkened satellite map of the world 
-10. Set HQ (College Station) Coordinates via ** var  hqLatLng = new L.LatLng(30.6280, -96.3344);**
+10. Set HQ (College Station) Coordinates via **var  hqLatLng = new L.LatLng(30.6280, -96.3344);**
 11. Use syslog-gen.py, or syslog-gen.sh to simulate dummy traffic "out of the box."
 12. **IMPORTANT: Remember, this code will only run correctly in a production environment after personalizing the parsing functions. The default parsing function is only written to parse ./syslog-gen.sh traffic.**
 
