@@ -1,5 +1,10 @@
 Tested on CentOS 7 with SELinux enforcing. 
 
+* Create folder inside **/opt**
+  ```sh
+  mkdir /opt/MissileMap
+  ```
+  
 * Clone the application:
 
   ```sh
@@ -16,7 +21,7 @@ Tested on CentOS 7 with SELinux enforcing.
 * Install python requirements:
 
   ```sh
-  cd geoip-attack-map
+  cd /var/MissileMap/geoip-attack-map
   sudo pip3 install -U -r requirements.txt
 
   ```
@@ -67,10 +72,8 @@ Tested on CentOS 7 with SELinux enforcing.
     sudo python3 AttackMapServer.py
     ```
  
-* Access the Attack Map Server from browser:
-
-    * [http://localhost:8888/](http://localhost:8888/) or [http://127.0.0.1:8888/](http://127.0.0.1:8888/)
-  
+* Access the Attack Map Web Interface:
+      
     * To access via browser on another computer, use the external IP of the machine running the AttackMapServer.
     
      * Edit the IP Address in the file "/static/map.js" at "AttackMapServer" directory. From:
@@ -81,7 +84,7 @@ Tested on CentOS 7 with SELinux enforcing.
      * To, for example: 
      
        ```javascript
-       var webSock = new WebSocket("ws:/192.168.1.100:8888/websocket");
+       var webSock = new WebSocket("ws:/IP-ADDRESS:8888/websocket");
        ```
      * Restart the Attack Map Server:
      
@@ -91,5 +94,5 @@ Tested on CentOS 7 with SELinux enforcing.
      * On the other computer, points the browser to:
      
        ```sh
-       http://192.168.1.100:8888/
+       http://IP-ADDRESS:8888/
        ```
