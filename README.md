@@ -18,7 +18,7 @@ This program relies entirely on syslog, and because all appliances format logs d
 4. Make sure **hq_ip** is set 
 5. Make sure that the WebSocket address in **/AttackMapServer/index.html** points back to the IP address of the **AttackMapServer** so the browser knows the address of the WebSocket.
 6. Make sure **Static** & **Flags** is set to location of unzipped files
-7. Download the MaxMind GeoLite2 database, and change the db_path variable in **DataServer.py** to the wherever you store the database.
+7. Download & Unzip the MaxMind GeoLite2 database, and change the **db_path** variable in **DataServer.py** to wherever you store the database.
     * ./db-dl.sh
 7. Add headquarters latitude/longitude to hqLatLng variable in **index.html**
 8. Add API token for mapbox to **L.Mapbox.accessToken** in **map.js**
