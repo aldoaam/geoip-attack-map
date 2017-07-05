@@ -1,5 +1,42 @@
 Tested on CentOS 7 with SELinux enforcing. 
 
+* Install Git & Wget
+  ```sh
+  sudo yum install git wget
+  ```
+
+* Install EPEL Repository & update YUM
+  ```sh
+  sudo yum install epel-release
+  sudo yum update
+  ```
+
+* Install Redis 
+  ```sh
+  sudo yum install redis
+  ```
+
+* Start Redis 
+  ```sh
+  sudo systemctl start redis
+  ```
+
+* Automatically start Redis on boot 
+  ```sh 
+  sudo systemctl enable redis
+  ```
+
+* Verify Redis is running (should respond with **Pong**)
+  ```sh 
+  redis-cli ping 
+  ```  
+  
+* Install Pip3
+  ```sh
+  sudo yum install python34-setuptools
+  sudo easy_install-3.4 pip
+  ```
+
 * Create folder inside **/opt**
   ```sh
   mkdir /opt/MissileMap
@@ -9,13 +46,6 @@ Tested on CentOS 7 with SELinux enforcing.
 
   ```sh
   git clone https://github.com/matthewclarkmay/geoip-attack-map.git
-  ```
-
-* Install system dependencies:
-
-  ```sh
-  sudo apt install python3-pip redis-server
-
   ```
 
 * Install python requirements:
